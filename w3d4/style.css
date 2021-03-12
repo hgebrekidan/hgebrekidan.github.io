@@ -1,0 +1,15 @@
+body{
+    background-color: aqua;
+}
+h1{
+    color:blue
+}
+h3{
+    color:blue
+}
+img{
+    border: 1px solid;
+    border-radius: 4px;
+    width: 400px;
+    height: 500px;
+}
