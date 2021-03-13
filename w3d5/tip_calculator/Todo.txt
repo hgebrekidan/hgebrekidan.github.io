@@ -1,0 +1,1 @@
+Make tip caclculator compute and display correct tip value in an unobtrusive way.

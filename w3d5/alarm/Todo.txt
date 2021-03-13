@@ -1,0 +1,1 @@
+Make alarm application work as expected in an unobtrusive way. See alarm.gif image
