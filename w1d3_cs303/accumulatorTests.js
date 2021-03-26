@@ -19,15 +19,15 @@ describe("accumulator", function () {
 
     it("checks accumulate", function () {
         const accumulator = new Accumulator(5, 10);
-        accumulator.accumulate();
-        accumulator.accumulate();
+        accumulator.accumulatedValue();
+        accumulator.accumulatedValue();
         assert.strictEqual(accumulator.currentValue, 25);
         assert.strictEqual(accumulator.increment, 10);
     });    
 
     it("checks report", function () {
         const accumulator = new Accumulator(5, 10);
-        assert.strictEqual(accumulator.report(), 5);
+        assert.strictEqual(accumulator.result(), 5);
     });    
 
 });

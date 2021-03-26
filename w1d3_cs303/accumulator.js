@@ -8,10 +8,10 @@
  function Accumulator(currentValue,increment){
     this.currentValue=currentValue;
     this.increment=increment;
-    this.accumulate=function(){
+    this.accumulatedValue=function(){
     return this.currentValue+=this.increment;
      }
-    this.report=function(){
+    this.result=function(){
     return this.currentValue;
      }
     //implement this
