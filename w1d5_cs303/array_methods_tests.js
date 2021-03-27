@@ -97,12 +97,12 @@ describe("groupById", function() {
     });
   });
   //decreasingOrderSort
-  describe("Sort arrays by deacreasing order", function () {
-    it("Sort arrays by deacreasing order", function () {
-        let arr0 = [5, 3, 8, 1];
-        assert.deepEqual(decreasingOrderSort(arr0), [8,5,3,1]);
-    });
-});
+//   describe("Sort arrays by deacreasing order", function () {
+//     it("Sort arrays by deacreasing order", function () {
+//         let arr0 = [5, 3, 8, 1];
+//         assert.deepEqual(decreasingOrderSort(arr0), [8,5,3,1]);
+//     });
+// });
 //copySorted
 describe("sorted arrays", function () {
     it("sorted arrays", function () {

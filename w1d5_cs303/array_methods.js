@@ -9,6 +9,9 @@ module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculato
 function copySorted(arr) {
     return arr.slice().sort();
   }
+//   function sortByDecreasingOrder(arr,a,b){
+//       return arr.sort((a, b) => b - a);;
+//   }
 
 function filterRange(arr, a, b) {
     return arr.filter(item => (a <= item && item <= b));
