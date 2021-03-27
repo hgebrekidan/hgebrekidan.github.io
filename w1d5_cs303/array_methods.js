@@ -4,8 +4,11 @@
 "use strict"
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator }; //add all of your function names here that you need for the node mocha tests
+module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator,copySorted }; //add all of your function names here that you need for the node mocha tests
 
+function copySorted(arr) {
+    return arr.slice().sort();
+  }
 
 function filterRange(arr, a, b) {
     return arr.filter(item => (a <= item && item <= b));
