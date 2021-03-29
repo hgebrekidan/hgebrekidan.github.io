@@ -37,12 +37,14 @@ describe("topSalary", function() {
     });
   });
 
-  /* Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’. */
+  /* Write a function getWeekDay(date) to show the 
+  weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, 
+  ‘SA’, ‘SU’. */
   describe("getWeekDay", function() {
     it("3 January 2014 - friday", function() {
       assert.equal(getWeekday(new Date(2014, 0, 3)), 'FR');
     });
-  
+
     it("4 January 2014 - saturday", function() {
       assert.equal(getWeekday(new Date(2014, 0, 4)), 'SA');
     });
@@ -102,8 +104,10 @@ describe("topSalary", function() {
 
 
   /*
-  Create a function getDateAgo(date, days) to return the day of month days ago from the date.
-For instance, if today is 20th, then getDateAgo(new Date(), 1) should be 19th and getDateAgo(new Date(), 2) should be 18th.
+  Create a function getDateAgo(date, days) to return the day of 
+  month days ago from the date.
+For instance, if today is 20th, then getDateAgo(new Date(),
+ 1) should be 19th and getDateAgo(new Date(), 2) should be 18th.
 Should work reliably for days=365 or more:
 */
 describe("getDateAgo", function() {
