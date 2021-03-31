@@ -23,7 +23,7 @@ describe("higher order functions filter", function () {
  
     });
     it("create an array of odd values", function () {
-        assert.deepEqual(myFilter([17, 21, 28, 1003, 4, 52],oddValue), [17, 21, 1003])
+        assert.deepEqual(myFilter([17, -21, 28, 1003, 4, 52],oddValue), [17, -21, 1003])
  
     });
  
