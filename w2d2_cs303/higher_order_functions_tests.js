@@ -34,10 +34,10 @@ describe("higher order functions reduce", function () {
  
     it("sums up values of an array", function () {
  
-        assert.deepEqual(myReduce([1, 2, 3, 4, 5],sumValue), 15)
+        assert.deepEqual(myReduce([1, 2, 3, 4, 5],sumValue,0), 15)
     })
     it("sums up values of an array", function () {
  
-        assert.deepEqual(myReduce([-1, 2, -3, 4, -5],sumValue), -3)
+        assert.deepEqual(myReduce([-1, 2, -3, 4, -5],sumValue,0), -3)
     })
 });

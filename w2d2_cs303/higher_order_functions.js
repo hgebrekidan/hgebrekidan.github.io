@@ -331,14 +331,14 @@ function oddValue(elem) {
 */
 
 
-function myReduce(arr, sumValue) {
-    let sum = 0
+function myReduce(arr, sumValue,accumulator) {
+    
     for (let key of arr) {
-        sum = sumValue(sum, key)
+        accumulator = sumValue(accumulator, key)
     }
-    return sum
+    return accumulator;
 }
 function sumValue(a, b) {
     return a + b;
 }
-    // console.log(myreduce([1,2,3,4,3],sumValue))
+    // console.log(myreduce([1,2,3,4,3],sumValue,0))

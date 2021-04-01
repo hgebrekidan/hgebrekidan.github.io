@@ -10,30 +10,46 @@ return arr.map(num => num * 2);
 
 function doubleAges(arr){
     
-        return arr.map((age,index,arr)=>arr[index]*2);}
+        return arr.map((key)=> {
+            return  {name:key.name,age:key.age*2}
+        });
+    }
 
-
-
+// let arr=[{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+// console.log(doubleAges(arr));
 function filterEven(arr){
 return arr.filter(item=>item%2===0);
 }
 
 function filterOver10(arr) {
-    return arr.filter(item=>item>10);
+    return arr.filter(key=> key.age>10);
 }
+//  arr=[{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+// console.log(filterOver10(arr));
+
+
 
 function findEvenNum(arr){
     return arr.find(item=>item%2===0);
 }
 
 function findEvenAge(arr){
-
+    return arr.find(key=>key.age%2===0);
 }
+let arr=[{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+console.log(findEvenAge(arr));
 
 function includesEvenNum(arr){
     return arr.includes(item=>item%2===0);
 }
 
 function includesEvenAge(arr){
-
+// return arr.includes(key=>key.age%2===0?true:false);
+return arr.includes(key=>key.age%2===0);
+        
 }
+arr=[{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+console.log(includesEvenAge(arr));
+
+let array=[1,2,3,4,5,6,7];
+console.log(array.includes(7));
