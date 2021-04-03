@@ -5,28 +5,29 @@
   
   function printList(list) {
 
-  
-    console.log(list.value); // output the current item
-  
-    if (list.next) {
-      printList(list.next); // do the same for the rest of the list
+  if (list) {
+      return list.value+""+printList(list.next); // do the same for the rest of the list
     }
+    // console.log(list.value+); // output the current item
+  return "";
+    
    
-  
   }
-  
-   printList(list);
+  let list = {value: 1,next: {value: 2,next: {value: 3,next: {value: 4,next: null}}}};
+
+  console.log(printList(list));
 
   // out put a single linked list recursively in reverse
 
   function printReverseList(list) {
   
-    if (list.next) {
-      printReverseList(list.next);
+    if (list.next===null) {
+       return list.value+"";
     }
+       return printReverseList(list.next)+list.value;
+   
   
-    alert(list.value);
   }
-  
-//   printReverseList(list);
+   list = {value: 1,next: {value: 2,next: {value: 3,next: {value: 4,next: null}}}};
+  console.log(printReverseList(list));
 
