@@ -30,45 +30,48 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 
 /**
  * 
- * @param {Object} ans1 is an answer object
- * @param {Object} ans2 is an answer object 
+ * @param {Object} obj1 is an answer object
+ * @param {Object} obj2 is an answer object 
  * @returns {number} difference of the identifiers
  */
- function answerComparator(ans1, ans2) {
-let sortedAn=quiz.students.answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
-return sortedAn
- }
+ function answerComparator(obj1, obj2) {
+    return obj1.qid - obj2.qid;
+}
 /**
  * 
- * @param {*} sid student id
+ * @param {*} id student id
  * @returns {number} score for student
  * find this student
  * sort the student answers
  * compare them against key and add up matches
  */
-quiz.scoreStudent = function (sid) {
-let student=quiz.students.find(stud=>stud.sid===sid)
-let result=student.answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
-let sum=0;
-for(let i=0;i<result.length;i++){
-    if(result[i].ans===quiz.key[i].ans){
-        sum+=1;
+quiz.scoreStudent = function (id) {
+    let student = quiz.students.find(item => item.sid === id);
+    if (student) {
+        student.answers.sort(answerComparator);
+        let totalScore = 0;
+        for (let i = 0; i < student.answers.length; i++) {
+            if (student.answers[i].ans === quiz.key[i].ans) {
+                totalScore++;
+            }
+        }
+        return totalScore;
     }
+
 }
-return sum;
-};
 //console.log(quiz.scoreStudent(10))
 /**
  * @returns {number} average score of all students
  * go through list of students and get score of each, then the average
  */
-quiz.getAverage = function(){
-let sum=0;
-for(let stud of quiz.students){
-    sum+=quiz.scoreStudent(stud.sid)
+quiz.getAverage = function () {
+    let sum = 0;
+    for (let stud of quiz.students) {
+        sum += this.scoreStudent(stud.sid);
+    }
+    let average = (sum / quiz.students.length).toFixed(3);
+    return average;
 }
-return sum/quiz.students.length
-};
 //console.log(quiz.getAverage())
 
 
