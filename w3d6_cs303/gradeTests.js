@@ -4,9 +4,11 @@
 /* You need the assert and function name declarations to test in node.  
 Comment these out when you send it to the browser with the index.html mocha setup page.   */
 
-const assert = require("assert");  //always need this with node
-const myExports = require("./grades.js");  //with node need the name of your file with your code here
-const quiz = myExports.quiz;  //do this for all of the objects or functions used in the Mocha tests
+// const assert = require("assert");  //always need this with node
+// const myExports = require("./grades.js");  //with node need the name of your file with your code here
+// const quiz = myExports.quiz; //do this for all of the objects or functions used in the Mocha tests
+// const scoreStudent = myExports.scoreStudent 
+// const getAverage=myExports.getAverage
 
 
 
